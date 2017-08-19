@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'fetch' => PDO::FETCH_CLASS,              // PDO fix
+    'fetch' => PDO::FETCH_CLASS,              // PDO fix 
+     //PDO::FETCH_ASSOC  //PDO::FETCH_NUM //PDO::FETCH_BOTH
 
     /*
     |--------------------------------------------------------------------------
