@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Database\Events\StatementPrepared;                 //  PDO fix
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -23,14 +24,12 @@ class EventServiceProvider extends ServiceProvider
      *
      * @return void
      */
-     Use PDO;
     public function boot()
     {
         parent::boot();
-        Event::listen('Illuminate\Database\Events\StatementPrepared', function ($event) {
-            $event->statement->setFetchMode(PDO::FETCH_ASSOC);
-        });
 
-        //
+        Event::listen(StatementPrepared::class, function ($event) {   //  PDO fix
+            $event->statement->setFetchMode(\PDO::FETCH_ASSOC);
+        });   //
     }
 }
