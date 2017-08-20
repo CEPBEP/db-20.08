@@ -13,8 +13,8 @@ class TestSeeder extends Seeder
      public function run()
      {
          DB::table('разделы')->insert([
-             'title' => 'Строка Названия',//str_random(10),
-             'text' => 'Текстовое Описание',// str_random(10),
+             'title' => 'Строка Названия',//str_random(10),    //заголовок позиции
+             'text' => 'Текстовое Описание',// str_random(10), //описание позиции
              'price' => ('22215'),
              'img' => ('testurl.png'),
              'metadata' => ('wtf ?'),
