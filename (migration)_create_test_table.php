@@ -34,3 +34,4 @@ class CreateTestTable extends Migration
          Schema::drop('разделы'); //DROP TABLE `разделы`;
      }
  }
+////////////
