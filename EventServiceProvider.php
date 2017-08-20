@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use Illuminate\Database\Events\StatementPrepared;                 //  PDO fix
+use Illuminate\Database\Events\StatementPrepared;                 // ЭТО ФИКС ДЛЯ PDO
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
