@@ -12,12 +12,12 @@ class TestSeeder extends Seeder
      */
      public function run()
      {
-         DB::table('test')->insert([
-             'title' => str_random(10),
-             'text' => str_random(10).'@gmail.com',
-             'price' => ('13'),
+         DB::table('разделы')->insert([
+             'title' => 'Строка Названия',//str_random(10),
+             'text' => 'Текстовое Описание',// str_random(10),
+             'price' => ('22215'),
              'img' => ('testurl.png'),
-             'alias' => ('alias'),
+             'metadata' => ('wtf ?'),
          ]);
      }
  }
