@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TestsTable extends Migration
+class GoodsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class TestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tests', function (Blueprint $table) {
-
-    //$table->engine = 'inno-db'; Варианты
-
+        Schema::create('goods', function (Blueprint $table) {
             $table->increments('id'); // id INT AUTO_INCREMENT
-            $table->string('Название',100); // Varchar 100
-            $table->text('Описание'); //text
-            $table->float('Цена'); //double(100,2)
+            $table->string('Title',100); // Varchar 100
+            $table->text('Description'); //text
+            $table->float('Price'); //double(100,2)
             $table->string('metadata',100); // Varchar 100
             $table->string('img',255);//Varchar 100
             $table->timestamps();
@@ -34,7 +31,6 @@ class TestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tests');
+        Schema::dropIfExists('goods');
     }
 }
-////////////
