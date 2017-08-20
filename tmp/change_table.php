@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
 class ChangeTestTable extends Migration
 {
     /**
@@ -13,11 +11,20 @@ class ChangeTestTable extends Migration
      */
     public function up()
     {
-        Schema::table('разделы', function (Blueprint $table) {
-           $table ->string('что-то новенькое',100);
-        });
-    }
+        if(Schema::hasTable('tests')){                        //проверка таблицы
 
+        Schema::table('tests', function (Blueprint $table){ //
+
+            if(Schema::hasColumn('tests')){                   //проверка столбца
+
+           $table ->string('new test',100);
+        }
+
+     });
+
+   }
+
+}
     /**
      * Reverse the migrations.
      *
@@ -25,8 +32,8 @@ class ChangeTestTable extends Migration
      */
     public function down()
     {
-        Schema::table('разделы', function (Blueprint $table) {
-           $table->dropColumn('что-то новенькое'); //
+        Schema::table('tests', function (Blueprint $table) {
+           $table->dropColumn('new test'); //
         });
     }
-}?>
+}
