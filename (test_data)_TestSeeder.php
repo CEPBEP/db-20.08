@@ -17,7 +17,7 @@ class TestSeeder extends Seeder
              'text' => 'Текстовое Описание', // str_random(10),  //описание позиции
              'price' => ('22215'),
              'img' => ('testurl.png'),
-             'metadata' => ('wtf ?'),
+             'metadata' => ('WTF ?'),
          ]);
      }
  }
