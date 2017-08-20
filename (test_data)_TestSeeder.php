@@ -3,6 +3,8 @@
 use Illuminate\Database\Seeder;
 use App\Test;
 
+      /////////////////////////////////////////////////////////////
+
 class TestSeeder extends Seeder
 {
     /**
@@ -12,12 +14,22 @@ class TestSeeder extends Seeder
      */
      public function run()
      {
-         DB::table('раздел')->insert([       // создать таблицу 
-             'title' => 'Строка Названия',   //str_random(10),   //заголовок позиции
-             'text' => 'Текстовое Описание', // str_random(10),  //описание позиции
+         DB::table('разделы')->insert([                        // создать таблицу 
+             'title' => 'Строка Названия',  //str_random(10),  //заголовок позиции
+             'text' => 'Текстовое Описание',// str_random(10), //описание позиции
              'price' => ('22215'),
              'img' => ('testurl.png'),
-             'metadata' => ('WTF ?'),
+             'metadata' => ('wtf ?'),
          ]);
+
+         //*//////////////////////////////////////////////////
+
+         Test::create([                    //создание через класс (model:App/Test.php)
+            'title' => 'Строка Названия',  //str_random(10),
+            'text' => 'Текстовое Описание',// str_random(10),
+            'price' => ('22215'),
+            'img' => ('testurl.png'),
+            'metadata' => ('wtf ?'),
+        ]);                               // */
      }
  }
