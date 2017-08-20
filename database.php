@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'fetch' => PDO::FETCH_CLASS,              // PDO fix 
-     //PDO::FETCH_ASSOC  //PDO::FETCH_NUM //PDO::FETCH_BOTH
+    'fetch' => PDO::FETCH_CLASS,                           // ! ЭТО ФИКС ДЛЯ PDO 
+    //PDO::FETCH_ASSOC  //PDO::FETCH_NUM //PDO::FETCH_BOTH // ! ЭТО ВАРИАНТЫ
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +66,7 @@ return [
             'prefix' => '',
             'strict' => true,
             'engine' => null,
-            'options'   => [PDO::ATTR_EMULATE_PREPARES => true,]  // FIX FOR - Wrong COM_STMT_PREPARE response size. 
+            'options'   => [PDO::ATTR_EMULATE_PREPARES => true,]  // ЭТО ФИКС ДЛЯ PDO - Wrong COM_STMT_PREPARE response size. 
         ],
 
         'pgsql' => [
