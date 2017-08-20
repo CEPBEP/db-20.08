@@ -1,13 +1,9 @@
 <?php
 
-<?php
-
 use Illuminate\Database\Seeder;
-use App\Test;
-
+use App\Goods;
 /////////////////////////////////////////////////////////////
-
-class TestSeeder extends Seeder
+class GoodsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,40 +12,35 @@ class TestSeeder extends Seeder
      */
      public function run()
      {
-         DB::table('разделы')->insert([
-             'Название' => 'Строка Названия',  //str_random(10),
-             'Описание' => 'Текстовое Описание',// str_random(10),
-             'Цена' => ('12215'),
+         DB::table('goods')->insert([
+             'Title' => 'Строка Названия',  //str_random(10),
+             'Description' => 'Текстовое Описание',// str_random(10),
+             'Price' => ('12210'),
              'img' => ('testurl.png'),
              'metadata' => ('wtf ?'),
          ]);
-
          //*//////////////////////////////////////////////////
-
-         Test::create([                    //создание через класс (model:App/Test.php)
-            'Название' => 'Строка Названия',  //str_random(10),
-            'Описание' => 'Текстовое Описание',// str_random(10),
-            'Цена' => ('12215'),
+         Goods::create([                    //создание через класс (model:App/Goods.php)
+            'Title' => 'Строка Названия',  //str_random(10),
+            'Description' => 'Текстовое Описание',// str_random(10),
+            'Price' => ('12211'),
             'img' => ('testurl.png'),
             'metadata' => ('wtf ?'),
         ]);                               // */
     
-
      {
-         DB::table('разделы')->insert([
-             'Название' => 'Строка Названия',  //str_random(10),
-             'Описание' => 'Текстовое Описание',// str_random(10),
-             'Цена' => ('22215'),
+         DB::table('goods')->insert([
+             'Title' => 'Строка Названия',  //str_random(10),
+             'Description' => 'Текстовое Описание',// str_random(10),
+             'Price' => ('22212'),
              'img' => ('testurl.png'),
              'metadata' => ('wtf ?'),
          ]);
-
          //*//////////////////////////////////////////////////
-
-         Test::create([                    //создание через класс (model:App/Test.php)
-            'Название' => 'Строка Названия',  //str_random(10),
-            'Описание' => 'Текстовое Описание',// str_random(10),
-            'Цена' => ('22215'),
+         Goods::create([                    //создание через класс (model:App/Goods.php)
+            'Title' => 'Строка Названия',  //str_random(10),
+            'Description' => 'Текстовое Описание',// str_random(10),
+            'Price' => ('222153'),
             'img' => ('testurl.png'),
             'metadata' => ('wtf ?'),
         ]);                               // */
