@@ -1,4 +1,5 @@
-    public function up()
+<?    
+public function up()
     {
         Schema::create('goods', function (Blueprint $table) {
             $table->increments('Id'); // id INT AUTO_INCREMENT 
